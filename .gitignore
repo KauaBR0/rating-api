@@ -4,4 +4,8 @@ node_modules
 .config
 .cache
 data/db
+data\db
+volumes\db
 volumes/db
+data
+volumes
