@@ -1,23 +1,26 @@
-version: '3'
+version: '3.9'
 
 services:
   server:
     container_name: NODEJS_SERVER
-    build: '.'
+    build: .
     volumes:
       - ./:/node-app
       - ./node_modules:/node-app/node_modules
     environment:
       NODE_ENV: development
+      MONGODB_URI: mongodb://db:27017/rating
     depends_on:
       - db
     links:
       - db
     ports:
       - '3000:3000'
+      
 
   db:
-    image: 'mongo'
+    image: mongo:latest
+    restart: always
     container_name: MONGODB
     ports:
       - '27017:27017'
