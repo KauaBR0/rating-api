@@ -1,6 +1,8 @@
 Serviço responsavel pela avaliação de serviço prestrado no sistema de barbearia
 
+
 # PARA RODAR
+* Crie o arquivo .env com suas credenciais
 * docker compose up
 ---
 * POST /api/rating: Para criar um novo rating, selecione "POST" como método, insira a URL http://localhost:3000/api/rating, clique na aba "Body", selecione "raw" e "JSON" como tipo, e insira um objeto JSON com os campos rating, idWorker e idService.
