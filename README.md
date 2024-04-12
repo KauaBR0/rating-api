@@ -1,8 +1,8 @@
 Serviço responsavel pela avaliação de serviço prestrado no sistema de barbearia
 
-* PARA RODAR
-docker compose up
-
+# PARA RODAR
+* docker compose up
+---
 * POST /api/rating: Para criar um novo rating, selecione "POST" como método, insira a URL http://localhost:3000/api/rating, clique na aba "Body", selecione "raw" e "JSON" como tipo, e insira um objeto JSON com os campos rating, idWorker e idService.
 
 * GET /api/rating/:idService: Para obter um rating específico, selecione "GET" como método, insira a URL http://localhost:3000/api/rating/{idService}, substituindo {idService} pelo ID do serviço que você deseja buscar.
