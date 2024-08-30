@@ -8,8 +8,6 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const dbUser = process.env.MONGODB_USER;
-const dbPassword = process.env.MONGODB_PASSWORD;
 const mongoURI = process.env.MONGODB_URI;
 
 mongoose
@@ -26,6 +24,7 @@ app.use(bodyParser.json());
 app.use(express.json());
 
 app.use('/api', require('./ratings/routes/ratings'));
+
 
 app.use(function (err, req, res, next) {
     res.status(422).send({ error: err.message });
